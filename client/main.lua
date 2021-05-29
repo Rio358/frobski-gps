@@ -46,10 +46,8 @@ Citizen.CreateThread(function()
 			if gps then
 				DisplayRadar(true)
 			else
-				for k, v in ipairs(Config.EmergencyVehicles) do
-					if GetDisplayNameFromVehicleModel(GetEntityModel(GetVehiclePedIsIn(PlayerPedId()))) == v then
-						gps = true 
-					end
+				if GetVehicleClass(GetVehiclePedIsIn(PlayerPedId(), false) == 18 then
+					gps = true 
 				end
 			end
 		end 
